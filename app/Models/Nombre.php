@@ -14,4 +14,5 @@ class Nombre extends Model
         'numero',
         'sexo'
     ];
+    
 }

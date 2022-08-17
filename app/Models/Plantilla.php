@@ -9,6 +9,7 @@ class Plantilla extends Model
 {
     use HasFactory;
     protected $fillable = [       
+		'slug',
         'nombre',
         'frase',
 	    'top',
@@ -70,5 +71,14 @@ class Plantilla extends Model
         'font2_id'
 				
     ];
+	public function font1(){
+        return $this->belongsTo(Font::class,'font1_id');
+    }
+
+    public function font2(){
+        return $this->belongsTo(Font::class,'font2_id');
+    }
+
+	
 
 }

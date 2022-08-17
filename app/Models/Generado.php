@@ -20,4 +20,14 @@ class Generado extends Model
         'nombre1_id',
         'nombre2_id',
     ];
+    public function nombre1(){
+        return $this->belongsTo(Nombre::class,'nombre1_id');
+    }
+
+    public function nombre2(){
+        return $this->belongsTo(Nombre::class,'nombre2_id');
+    }
+    public function plantilla(){
+        return $this->belongsTo(Plantilla::class);
+    }
 }
